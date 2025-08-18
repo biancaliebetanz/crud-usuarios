@@ -3,11 +3,11 @@ import { useState } from 'react'
 
 export default function Login() {
 
-type tela = "login" | "cadastro"
+type tela = "login" | "cadastro";
 const [visualizar, setVisualizar] = useState<tela>("login");
 
   return (
-    <main>
+    <main className="main">
         {visualizar === "login" && (
         <div className="container-login">
           <h1>Login</h1>
@@ -18,7 +18,7 @@ const [visualizar, setVisualizar] = useState<tela>("login");
         </div>
       )}
       {visualizar === "cadastro" && (
-      <div className="container-login">
+      <div className="container-cadastro">
         <h1 className="titulo">Cadastro</h1>
         <input placeholder="Nome" type="text" name="" id="" className="input-texto" />
         <input placeholder="Nome Completo" type="text" name="" id="" className="input-texto" />
